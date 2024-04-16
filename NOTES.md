@@ -20,4 +20,15 @@
  - To serve SVG images with the default Image Optimization API, set `dangerouslyAllowSVG` inside the next.config.js
  - `onLoad`, `onError` callback functions can be used with Client Components.
  - Images are optimized dynamically upon request and stored in the `<distDir>/cache/images` directory. The optimized image file will be served for subsequent requests until the expiration is reached. The cache status of an image can be determined by reading the value of the `x-nextjs-cache` (MISS, STALE, HIT) 
+
+ ### 4. Layouts and Pages
+- Next.js uses `file-system routing` where folders are used to create nested routes. Each folder represents a route segment that maps to a URL segment.
+- Next.js allows you to colocate UI components, test files, and other related code with your routes. Only the content inside the page file will be publicly accessible.
+- `layout.tsx` file to create UI that is shared between multiple pages.
+- One benefit of using layouts is that on navigation, only the page components update while `the layout won't re-render`.
+
+### 5. Navigating Between Pages
+- Next.js automatically code splits the application by route segments. Splitting code by routes means that pages become isolated. If a certain page throws an error, the rest of the application will still work.
+-In production, whenever <Link> components appear in the browser's viewport, Next.js automatically prefetches the code for the linked route in the background. 
+- Next.js provides `usePathname() hook` that can be used to check the path.
 	
