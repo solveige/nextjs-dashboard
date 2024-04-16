@@ -32,3 +32,9 @@
 -In production, whenever <Link> components appear in the browser's viewport, Next.js automatically prefetches the code for the linked route in the background. 
 - Next.js provides `usePathname() hook` that can be used to check the path.
 	
+### 6. Fetching Data
+- In Next.js, you can create API endpoints using Route Handlers.
+- When using React Server Components (fetching data on the server), it's possible to skip the API layer, and query the database directly.
+- By default, Next.js applications use React Server Components, which are executed on the server.
+- Server Components support promises.
+- By default, Next.js prerenders routes to improve performance, this is called `Static Rendering`. So if your data changes, it won't be reflected in your dashboard.
