@@ -38,3 +38,10 @@
 - By default, Next.js applications use React Server Components, which are executed on the server.
 - Server Components support promises.
 - By default, Next.js prerenders routes to improve performance, this is called `Static Rendering`. So if your data changes, it won't be reflected in your dashboard.
+
+### 7. Static and Dynamic Rendering
+
+- With `static rendering`, data fetching and rendering happens on the server at `build time` or during `revalidation`.
+- Benefits of static rendering: Faster Websites(cached content), Reduced Server Load, SEO.
+- With `dynamic rendering`, content is rendered on the server for each user at `request time`.
+- Benefits of dynamic rendering: Real-Time Data, User-Specific Content, Request Time Information.
