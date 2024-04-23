@@ -45,3 +45,22 @@
 - Benefits of static rendering: Faster Websites(cached content), Reduced Server Load, SEO.
 - With `dynamic rendering`, content is rendered on the server for each user at `request time`.
 - Benefits of dynamic rendering: Real-Time Data, User-Specific Content, Request Time Information.
+
+### 8. Streaming
+
+- Streaming is a data transfer technique that allows to break down a route into smaller "chunks".
+- Each component can be considered a chunk.
+- There are two ways you implement streaming: `loading.tsx` file - for page, with <Suspense> - for component.
+
+### 9. Partial Prerendering
+- Partial Prerendering is an experimental feature.
+- Allows to render a route with a static loading shell, while keeping some parts dynamic.
+- At build time (or during revalidation), the static parts of the route are prerendered, and the rest is postponed until the user requests the route.
+- When using Suspense to wrap the dynamic parts of the route, Next.js will know which parts of the route are static and which are dynamic.
+
+### 10. Route Groups 
+- Allows to organize your route segments and project files into logical groups without affecting the URL path structure.
+- A route group can be created by wrapping a folder's name in parenthesis: `(folderName)`.
+- It's possible to create a different layout for each group by adding a layout.js file inside their folders.
+- To create multiple root layouts, remove the top-level layout.js file, and add a layout.js file inside each route group.
+- Navigating across multiple root layouts will cause a full page load (as opposed to a client-side navigation).
